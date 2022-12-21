@@ -25,7 +25,21 @@ public class App extends JFrame {
 
     public App() {
         persons = new ArrayList<>();
+        ButtonGroup GroupButton = new ButtonGroup();
+        GroupButton.add(rbCustomer);
+        GroupButton.add(rbClerk);
+        GroupButton.add(rbManager);
+
         // TODO add implementations for all milestones here
+        rbCustomer.addChangeListener(event ->{
+            if (rbCustomer.isSelected()){
+                tfMonths.setEnabled(false);
+                tfSalary.setEnabled(false);
+            } else {
+                tfMonths.setEnabled(true);
+                tfSalary.setEnabled(true);
+            }
+        });
     }
 
     public static void main(String[] args) {
