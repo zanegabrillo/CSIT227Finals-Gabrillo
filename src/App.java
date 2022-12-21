@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class App extends JFrame {
     private JPanel pnlMain;
     private JRadioButton rbCustomer;
     private JRadioButton rbClerk;
@@ -30,9 +30,16 @@ public class App {
 
     public static void main(String[] args) {
         // add here how to make GUI visible
-    }
+            App Zane = new App();
+            Zane.setTitle("Person App");
+            Zane.setContentPane(Zane.pnlMain);
+            Zane.setSize(1280, 720);
+            Zane.setDefaultCloseOperation(EXIT_ON_CLOSE);
+            Zane.setVisible(true);
+        }
 
     static void giveReward(int n) {
+
 
     }
 }
