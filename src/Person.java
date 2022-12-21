@@ -1,37 +1,35 @@
 public class Person {
     // TODO implement Person and its subclasses in other Java files
-        private String name;
-        private int age;
+    String name;
+    int age;
 
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        @Override
-        public String toString() {
-            return "Hello, my name is " + name + ".";
-        }
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public class Employee {
-        private int monthsWorked;
-        private double salary;
-        private double thirteenthMonth;
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Hello, my name is " + name + ".";
+    }
+    public class Employee extends Person {
+        int monthsWorked;
+        double salary;
+        double thirteenthMonth;
 
         public Employee(String name, int age, int monthsWorked, double salary) {
             super(name, age);
             this.monthsWorked = monthsWorked;
             this.salary = salary;
-            this.thirteenthMonth = 12/ monthsWorked;
+            this.thirteenthMonth = salary / 12;
         }
 
         public int getMonthsWorked() {
