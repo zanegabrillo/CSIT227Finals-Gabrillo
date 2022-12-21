@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class App extends JFrame {
     private JPanel pnlMain;
@@ -31,8 +33,8 @@ public class App extends JFrame {
         GroupButton.add(rbManager);
 
         // TODO add implementations for all milestones here
-        rbCustomer.addChangeListener(event ->{
-            if (rbCustomer.isSelected()){
+        rbCustomer.addChangeListener(event -> {
+            if (rbCustomer.isSelected()) {
                 tfMonths.setEnabled(false);
                 tfSalary.setEnabled(false);
             } else {
@@ -40,7 +42,20 @@ public class App extends JFrame {
                 tfSalary.setEnabled(true);
             }
         });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+                tfName.setText(null);
+                tfAge.setText(null);
+                tfMonths.setText(null);
+                tfSalary.setText(null);
+                tfLoad.setText(null);
+            }
+        });
+
     }
+
 
     public static void main(String[] args) {
         // add here how to make GUI visible

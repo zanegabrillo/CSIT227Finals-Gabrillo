@@ -29,7 +29,7 @@ public class Person {
             super(name, age);
             this.monthsWorked = monthsWorked;
             this.salary = salary;
-            this.thirteenthMonth = salary / 12;
+            this.thirteenthMonth = salary / (12/ monthsWorked);
         }
 
         public int getMonthsWorked() {
