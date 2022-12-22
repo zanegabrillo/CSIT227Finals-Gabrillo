@@ -54,8 +54,15 @@ public class App extends JFrame {
                 tfLoad.setText(null);
             }
         });
+        btnSayHi.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for(Person p : persons) {
+                    taPersons.append(p.toString() + "\n");
+                }
+            }
+        });
     }
-
     public static void main(String[] args) {
         // add here how to make GUI visible
             App Zane = new App();
