@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
@@ -53,10 +54,7 @@ public class App extends JFrame {
                 tfLoad.setText(null);
             }
         });
-
-
     }
-
 
     public static void main(String[] args) {
         // add here how to make GUI visible
@@ -67,9 +65,4 @@ public class App extends JFrame {
             Zane.setDefaultCloseOperation(EXIT_ON_CLOSE);
             Zane.setVisible(true);
         }
-
-    static void giveReward(int n) {
-
-
-    }
 }
